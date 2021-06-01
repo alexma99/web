@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    /* background-color: #e6abd4; */
+    background-color: #f0e8b4;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    width: 400px;
+    /* transition: all .2s linear; */
+}
+
+
+h1, h2, h3 {
+    line-height: 1.5;
+}
+
+/* h4 {
+    text-transform: uppercase;
+} */
+
+main {
+    margin-top: 30px;
+}
+
+.total {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+}
+
+.total__balance{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.total__header{
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total__main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.total__main-item {
+    flex: 1;
+    text-align: center;
+    padding-top: 15px;
+
+}
+
+.total__main-item:first-child{
+    border-right: 1px solid rgb(204, 204, 204);
+}
+
+/* баланс */
+.total__money {
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+/* расходы */
+.total__money-expenses {
+    color: red;
+}
+
+/* доходы */
+.total__money-income {
+    color: darkgreen;
+}
+
+.history {
+    margin-top: 40px;
+}
+
+/* история расходов */
+.history__item {
+    height: 60px;
+
+    flex-direction: column;
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+    line-height: 25px;
+    position: relative;
+}
+
+.history__item-plus{
+    border-color: #8cd44c;
+    background-color: #8cd44c;
+}
+
+.history__item-minus{
+    border-color: rgb(233, 119, 98);
+    background-color: rgb(233, 119, 98);
+}
+
+.history__money{
+    flex: 1;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.history_delete{
+    background-color: transparent;
+    color: red;
+    padding: 0 10;
+    border-width: 0;
+    font-size: 20px;
+    opacity: 0;
+    /* transition: opacity 0.3s ease; */
+    cursor: pointer;
+}
+
+.history__item:hover .history_delete{
+    opacity: 1;
+}
+
+.operation {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: white;
+    border-radius: 25px;
+    padding: 15px 15px;
+}
+
+/* для полей операций */
+.operation__fields{
+    display: block;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding:  10px 15px;
+    margin: 5px 0;
+    font-size: 16px;
+    width: 100%;
+    outline: transparent;
+}
+
+/* при введении операции */
+.operation__fields:focus{
+    border: 1px solid rgb(224, 171, 56);
+}
+
+/* ошибка если введены пустые значения */
+.error{
+    border: 2px solid red ;
+}
+.error::placeholder{
+    color: red;
+}
+
+/* кнопка добавить операцию */
+.operation__add {
+    /* background-color: rgb(185, 87, 189); */
+    background-color: rgb(224, 171, 56);
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(224, 171, 56);
+    color: #fff;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px 0;
+    width: 100%;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: background-color .3s linear;
+}
+
+.operation__add:hover {
+    background-color: white;
+    color: rgb(224, 171, 56);
+}
+
+/* заголовок */
+.white-heading{
+    color: black;
+    border-radius: 30px;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+}
+.date-block{
+    color: #fff;
+    font-weight: bold;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-style: italic;
+    font-size: 12px;
+
+}
+@media screen and (max-width: 420px){
+
+    .container{
+        width: 310px;
+    }
+
+}
+
+
+
